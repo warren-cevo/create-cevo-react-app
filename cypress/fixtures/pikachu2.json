@@ -1,0 +1,9 @@
+{
+  "id": 2,
+  "species": {
+    "name": "pikachu2"
+  },
+  "sprites": {
+    "front_shiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png"
+  }
+}
