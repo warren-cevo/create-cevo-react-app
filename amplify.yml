@@ -1,7 +1,4 @@
 version: 1
-env:
-  variables:
-    key: value
 frontend:
   phases:
     preBuild:
@@ -9,28 +6,12 @@ frontend:
         - npm ci
     build:
       commands:
+        - cp -Rf index-production.html index.html
         - npm run build
   artifacts:
+    baseDirectory: dist
     files:
-        - location
-        - location
-    discard-paths: yes
-    baseDirectory: location
+      - "**/*"
   cache:
     paths:
-        - path
-        - path
-test:
-  phases:
-    preTest:
-      commands:
-        - npm install
-    test:
-      commands:
-        - npm test
-        - npm lint
-        - npm run cy:ci
-  artifacts:
-    files:
-        - location
-        - location
+      - node_modules/**/*
