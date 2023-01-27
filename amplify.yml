@@ -1,0 +1,36 @@
+version: 1
+env:
+  variables:
+    key: value
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    files:
+        - location
+        - location
+    discard-paths: yes
+    baseDirectory: location
+  cache:
+    paths:
+        - path
+        - path
+test:
+  phases:
+    preTest:
+      commands:
+        - npm install
+    test:
+      commands:
+        - npm test
+        - npm lint
+        - npm run cy:ci
+  artifacts:
+    files:
+        - location
+        - location
