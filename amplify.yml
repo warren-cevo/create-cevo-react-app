@@ -6,7 +6,6 @@ frontend:
         - npm ci
     build:
       commands:
-        - cp -Rf index-production.html index.html
         - npm run build
   artifacts:
     baseDirectory: dist
