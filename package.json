@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "homepage": "https://warren-cevo.github.io/create-cevo-react-app",
   "scripts": {
     "dev": "vite",
     "build": "cp -Rf ./index-production.html ./index.html; tsc && vite build",
@@ -11,7 +12,9 @@
     "lint": "eslint ./src",
     "cy:local": "cypress open",
     "cy:ci": "start-server-and-test dev http://localhost:5173 \"cypress run\"",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -44,6 +47,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "jsdom": "^21.0.0",
     "msw": "^0.49.2",
     "prettier": "^2.8.2",
